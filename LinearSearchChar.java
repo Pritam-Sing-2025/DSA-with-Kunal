@@ -1,5 +1,8 @@
 public class LinearSearchChar {
     static String linearSearch (String str, char target) {
+        if (str.length() == 0) {
+            return "Empty string.";
+        }
         for (int i = 0; i < str.length() -1; i++) {
             if (str.charAt(i) == target) {
                 return "Found at:" + i;
