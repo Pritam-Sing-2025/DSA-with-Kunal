@@ -1,3 +1,5 @@
+// package Lec-01-LinSearch;
+
 public class LinearSearch {
     public static void main(String[] args) {
         int[] arr = {14, 53, 32, 29, 60, 70, 38};

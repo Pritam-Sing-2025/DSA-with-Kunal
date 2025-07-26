@@ -1,3 +1,5 @@
+// package Lec-01-LinSearch;
+
 public class LinearSearchChar {
     static String linearSearch (String str, char target) {
         if (str.length() == 0) {
@@ -17,3 +19,4 @@ public class LinearSearchChar {
         System.out.println(ans);
     }
 }
+
