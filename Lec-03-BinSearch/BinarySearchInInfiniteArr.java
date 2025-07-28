@@ -1,7 +1,7 @@
 public class BinarySearchInInfiniteArr {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 5, 7, 9, 11, 13, 19, 25, 31, 39, 40, 43, 44, 48, 52};
-        int target = 44;
+        int[] arr = {2, 3, 5, 7, 9, 11, 19, 27, 33, 36, 39, 41, 49, 62, 66, 70, 89, 121, 171, 200, 230, 278};
+        int target = 230;
         System.out.println(searchInInfiniteArr(arr, target));
     }
     static int searchInInfiniteArr (int[] arr, int target){

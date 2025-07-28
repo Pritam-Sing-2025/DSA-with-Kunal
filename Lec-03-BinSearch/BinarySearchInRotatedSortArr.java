@@ -1,7 +1,7 @@
-public class BinarySearchUnknown {
+public class BinarySearchInRotatedSortArr {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 6, 9, 12, 1, 4, 5, 8};
-        int target = 12;
+        int[] arr = {3, 5, 7, 9, 0, 1, 2};
+        int target = 1;
         System.out.println(search(arr, target));
     }
     static int search (int[] arr, int target) {
@@ -9,7 +9,7 @@ public class BinarySearchUnknown {
         if (pivot == -1) {
             return binarySearch(arr, target, 0, arr.length -1);
         }
-        if (target == pivot) {
+        if (arr[pivot] == target) {
             return pivot;
         }
         if (target >= arr[0]) {
@@ -22,10 +22,10 @@ public class BinarySearchUnknown {
         int end = arr.length -1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (mid < end && arr[mid] > arr[mid + 1]) {
+            if (arr[mid] > arr[mid + 1] && mid < end) {
                 return mid;
             }
-            if (mid > start && arr[mid] < arr[mid - 1]) {
+            if (arr[mid] < arr[mid - 1] && mid > start) {
                 return mid -1;
             }
             if (arr[mid] <= arr[start]) {

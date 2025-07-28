@@ -1,7 +1,7 @@
 public class BinarySearchInMountArr {
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 7, 8, 6, 4, 2};
-        int target = 4;
+        int target = 7;
         System.out.println(search(arr, target));
     }
     static int search (int[] arr, int target) {
