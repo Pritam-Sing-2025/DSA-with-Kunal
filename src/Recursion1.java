@@ -145,21 +145,38 @@ public class Recursion1 {
 //        return helper(n / 10, count);
 //    }
 
-    // Count number of steps
+//    // Count number of steps
+//    public static void main(String[] args) {
+//        System.out.println(count(14));
+//    }
+//    static int count(int n) {
+//        return helper(n, 0);
+//    }
+//    static int helper(int n, int step) {
+//        if (n == 0) {
+//            return step;
+//        }
+//        if (n % 2 == 0) {
+//            return helper(n / 2, step + 1);
+//        }
+//        return helper(n - 1, step + 1);
+//    }
+
+    // Number of Steps to Reduce a Number to Zero (Leetcode)
     public static void main(String[] args) {
         System.out.println(count(14));
     }
-    static int count(int n) {
-        return helper(n, 0);
+    static int count (int num) {
+        return helper(num, 0);
     }
-    static int helper(int n, int step) {
-        if (n == 0) {
-            return step;
+    static int helper(int num, int steps) {
+        if(num == 0) {
+            return steps;
         }
-        if (n % 2 == 0) {
-            return helper(n / 2, step + 1);
+        if (num % 2 == 0) {
+            return helper(num/2, steps+1);
         }
-        return helper(n - 1, step + 1);
+        return helper(num-1, steps+1);
     }
 
 
