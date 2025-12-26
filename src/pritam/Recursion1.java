@@ -1,3 +1,5 @@
+package pritam;
+
 public class Recursion1 {
 
 //    // printing numbers
@@ -68,7 +70,6 @@ public class Recursion1 {
 //    }
 //    public static void passNums(int n) {
 //        if (n == 0) {
-////            System.out.println();
 //            return;
 //        }
 ////        System.out.println(n);
@@ -162,22 +163,22 @@ public class Recursion1 {
 //        return helper(n - 1, step + 1);
 //    }
 
-    // Number of Steps to Reduce a Number to Zero (Leetcode)
-    public static void main(String[] args) {
-        System.out.println(count(14));
-    }
-    static int count (int num) {
-        return helper(num, 0);
-    }
-    static int helper(int num, int steps) {
-        if(num == 0) {
-            return steps;
-        }
-        if (num % 2 == 0) {
-            return helper(num/2, steps+1);
-        }
-        return helper(num-1, steps+1);
-    }
+//    // Number of Steps to Reduce a Number to Zero (Leetcode)
+//    public static void main(String[] args) {
+//        System.out.println(count(14));
+//    }
+//    static int count (int num) {
+//        return helper(num, 0);
+//    }
+//    static int helper(int num, int steps) {
+//        if(num == 0) {
+//            return steps;
+//        }
+//        if (num % 2 == 0) {
+//            return helper(num/2, steps+1);
+//        }
+//        return helper(num-1, steps+1);
+//    }
 
 
 }
