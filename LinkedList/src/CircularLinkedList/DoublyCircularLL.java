@@ -74,7 +74,7 @@ public class DoublyCircularLL {
 
     public void remFirst() {
         if (head == null) {
-            System.out.println("lisyt is empty");
+            System.out.println("list is empty");
             return;
         }
         if (size == 1) {
@@ -88,7 +88,50 @@ public class DoublyCircularLL {
         tail.next = head;
     }
 
-    
+    public void remLast() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        if (size == 1) {
+            head = tail = null;
+            size = 0;
+            return;
+        }
+        tail = tail.prev;
+        tail.next = head;
+        head.prev = tail;
+        size--;
+    }
+
+    public void remMid(int ind) {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        if (size == 1) {
+            head = tail = null;
+            size = 0;
+            return;
+        }
+        if (ind == 0) {
+            remFirst();
+            return;
+        }
+        if (ind == size) {
+            remLast();
+            return;
+        }
+        Node prevNode = head;
+        int i = 0;
+        while (i < ind - 1) {
+            prevNode = prevNode.next;
+            i++;
+        }
+        prevNode.next = prevNode.next.next;
+        prevNode.next.prev = prevNode;
+        size--;
+    }
 
     public void print() {
         if (head == null) {
@@ -118,6 +161,12 @@ public class DoublyCircularLL {
         dcll.print();
         System.out.println(dcll.size);
         dcll.remFirst();
+        dcll.print();
+        System.out.println(dcll.size);
+        dcll.remLast();
+        dcll.print();
+        System.out.println(dcll.size);
+        dcll.remMid(2);
         dcll.print();
         System.out.println(dcll.size);
     }
